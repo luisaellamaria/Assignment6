@@ -8,14 +8,14 @@ Assignment 6 Solution
 
 # GitHub link to your (forked) repository
 
-...
+- https://github.com/luisaellamaria/Assignment6.git
 
 # Task 1
 
 1. WebIDs of the group members
 
 Ans:
-- 
+- https://solid.interactions.ics.unisg.ch/emmas-pod/profile/card#me
 
 
 2. Group profile
