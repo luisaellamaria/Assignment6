@@ -1,46 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>Movies</title>
 </head>
 <body>
-    <div>
-        <form action="/movies" method="get">
-            <input name="url" type="text" id="url">
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-  <div>
+<div>
+    <form action="/movies" method="get">
+        <input name="url" type="text" id="url" placeholder="Enter SPARQL endpoint URL">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<div>
     <label>Movies:</label>
     <ul id="movie_list"></ul>
-  </div>
-  <script src="/socket.io/socket.io.js"></script>
+</div>
+<script src="/socket.io/socket.io.js"></script>
 <script>
-var socket = io();
-socket.on('update', (msg) => {
-  console.log("receive message");
-    message = msg['message']
-    console.log("message: ", message)
-    name = message["name"]
-    image_url = message["image"]
-    const node = document.createElement("li");
-    const divNode = document.createElement("div");
-    const textNode = document.createTextNode(name);
-    const imageNode = document.createElement("img");
-    const brNode = document.createElement("br");
-    imageNode.src = image_url
-    divNode.appendChild(textNode);
-    divNode.appendChild(brNode);
-    divNode.appendChild(imageNode)
-    node.appendChild(divNode)
-    document.getElementById("movie_list").appendChild(node);
-  });
+    var socket = io();
+    socket.on('update', (msg) => {
+        let message = msg['message'];
+        let name = message["name"];
+        let image_url = message["image"];
+        let description = message["description"];
+        let datePublished = message["datePublished"];
+
+        const node = document.createElement("li");
+        const divNode = document.createElement("div");
+        const textNode = document.createTextNode(name + " - " + datePublished);
+        const imageNode = document.createElement("img");
+        const descNode = document.createTextNode(description);
+        const brNode = document.createElement("br");
+
+        imageNode.src = image_url;
+        divNode.appendChild(textNode);
+        divNode.appendChild(brNode);
+        divNode.appendChild(imageNode);
+        divNode.appendChild(brNode.cloneNode());
+        divNode.appendChild(descNode);
+        node.appendChild(divNode);
+        document.getElementById("movie_list").appendChild(node);
+    });
 </script>
 <style>
-  img {
-    width: 100px;
-    height: 200px;
-  }
+    img {
+        width: 100px;
+        height: 150px;
+    }
 </style>
-
 </body>
 </html>
