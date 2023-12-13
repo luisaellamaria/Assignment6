@@ -22,7 +22,7 @@ Ans:
 2. Group profile
 
 Ans:
-- 
+- https://solid.interactions.ics.unisg.ch/emmas-pod/10people
 
 
 
