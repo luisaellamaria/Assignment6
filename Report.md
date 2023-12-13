@@ -16,6 +16,7 @@ Assignment 6 Solution
 
 Ans:
 - https://solid.interactions.ics.unisg.ch/emmas-pod/profile/card#me
+- https://solid.interactions.ics.unisg.ch/my-name-pod/profile/luisaspoddie
 
 
 2. Group profile
