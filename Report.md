@@ -3,9 +3,8 @@ Assignment 6 Solution
 
 # Team Members
 
-- Sanjiv Jha
-- Jérémy Lemée
-- Andrei Ciortea
+- Emma Kozmér
+- Luisa Ella Maria
 
 # GitHub link to your (forked) repository
 
@@ -16,11 +15,13 @@ Assignment 6 Solution
 1. WebIDs of the group members
 
 Ans:
+- 
 
 
 2. Group profile
 
 Ans:
+- 
 
 
 
